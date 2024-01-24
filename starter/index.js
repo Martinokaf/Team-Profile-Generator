@@ -151,6 +151,7 @@ function teamMember() {
 // The fs.existsSync method verifies if there's any existing file and if there is, a duplicate wouldn't be created 
 // The fs.writeFile method prompt the team array which passes the team name into render function
     function writeFile(answer) {
+        console.log(team)
         const outputPath = path.join(OUTPUT_DIR, `${answer.teamname}.html`)
         if (!fs.existsSync(outputPath)) {
         fs.writeFile(outputPath, render(team), err => 

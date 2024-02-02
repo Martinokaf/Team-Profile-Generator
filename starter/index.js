@@ -1,8 +1,12 @@
+// This imports from the lib directory
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
+// This improts libraries within the application 
 const inquirer = require("inquirer");
+// This is for handling file and directory
 const path = require("path");
+//This is for file system operations
 const fs = require("fs");
 
 const OUTPUT_DIR = path.resolve(__dirname, "output");
@@ -65,7 +69,7 @@ function teamMember() {
                 return;
             }
         })
-    }
+    };
     // This prompt users to answer few questions, which then creates a new Engineer and pushes it to the team array, then calls createTeam to add new employee
     function addEngineer() {
         inquirer.prompt([
@@ -151,11 +155,11 @@ function teamMember() {
 // The fs.existsSync method verifies if there's any existing file and if there is, a duplicate wouldn't be created 
 // The fs.writeFile method prompt the team array which passes the team name into render function
     function writeFile(answer) {
-        console.log(team)
+        // console.log(team)
         const outputPath = path.join(OUTPUT_DIR, `${answer.teamname}.html`)
         if (!fs.existsSync(outputPath)) {
-        fs.writeFile(outputPath, render(team), err => 
-        err ? console.error(err) : console.log('File successfully created'))
+        fs.writeFile(outputPath, render(team), (err) => 
+            err ? console.error(err) : console.log('File successfully created'))
         } else console.log("Team with that name already exists!")
     }
 

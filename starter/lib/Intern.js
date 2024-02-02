@@ -9,6 +9,10 @@ class Intern extends Employee {
 // This is a method of prompting the school the Intern is being entolled
 getSchool() {
     return this.school
-}}
+}
+getRole() {
+    return 'Intern';
+}
+}
 // This method exports the Intern class in order to be imported for usage
 module.exports = Intern;

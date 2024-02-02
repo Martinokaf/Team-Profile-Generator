@@ -9,6 +9,10 @@ class Engineer extends Employee {
 // This is a method of prompting the Engineer's github username
 getGithub() {
     return this.github
-}}
+}
+getRole() {
+    return 'Engineer';
+}
+}
 // This method exports the Engineer class in order to be imported for usage
 module.exports = Engineer;

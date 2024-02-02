@@ -38,7 +38,7 @@ The following features and functionalities are available in the application:
 
 - Right click the output file and click "Open in Default Browser" to view your team profile.
 
-![Sample webpage](starter/assets/jpg/Screenshot.png)
+![Sample webpage](assets/jpg/Screenshot.png)
 
 ## Credits
 
